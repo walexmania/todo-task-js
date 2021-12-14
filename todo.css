@@ -1,0 +1,224 @@
+*, *::before, *::after  { 
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    background-color: hsl(0, 0%, 23.1%);
+    padding: 7px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+}
+
+.todoContentArea {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+}
+
+.sidebar    {
+    background-color:hsl(0, 0%, 12.9%);
+}
+
+.task   {
+    background-color:hsl(0, 0%, 11%);
+    color: #222;
+}
+.taskHomeIcon {
+    width: 100%;
+    margin: 30px 110px;
+}
+.taskHomeIcon   {
+    width: 100%;
+    object-fit: center;
+}
+.taskCentralIcon    {
+    width: 150px;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.taskCentralIcon img {
+    width: 100px;
+    object-fit: center;
+}
+.formGroup {
+    max-width: 700px;
+    min-width: 380px;
+    padding: 5px;
+    background: hsl(0, 0%, 23.1%);
+    border-radius:3px;
+    outline: none;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#createTodo{
+    padding: 5px;
+    width: 100%;    
+    background: hsl(0, 0%, 23.1%);
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.searchGroup    {
+    margin-top: 4rem;
+    max-width: 250px;
+    min-width: 100px;
+    border-radius:3px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 2px solid #fff;
+    border-left: 1px solid hsl(0, 0%, 23.1%);
+    border-right: 1px solid hsl(0, 0%, 23.1%);
+    border-top: 1px solid hsl(0, 0%, 23.1%);
+    outline: none;
+    background: hsl(0, 0%, 23.1%);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 24px 0px;
+}
+
+#searchField{
+    padding: 15px;
+    height: 20px;
+    width: 100%;
+    background: hsl(0, 0%, 12.9%);
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ::-webkit-input-placeholder{
+    text-transform: capitalize;
+} */
+
+.assignTasks, .createTasks{
+    max-width: 300px;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 7px;
+    border-radius:3px;
+    outline: none;
+    border: none;
+}
+
+.buttons {
+    margin-top: 6rem;
+}
+a:hover{
+    background-color: hsl(0, 0%, 23.1%);
+    padding: 7px 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+    .formGroup{
+        max-width: 620px;
+    }
+    .searchGroup{
+        max-width: width 230px;
+    }
+}
+@media screen and (max-width: 978px) {
+    .formGroup{
+        max-width: 450px;
+    }
+    .searchGroup{
+        max-width: width 185px;
+    }
+}
+@media screen and (max-width: 678px) {
+    .formGroup{
+        max-width: 350px;
+        min-width: 100px;
+        margin-bottom: 8rem;
+    }
+}
+@media screen and (max-width: 578px) {
+    .todoContentArea{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .taskHomeIcon{
+        margin: 30px;
+    }
+    .assignTasks, .createTasks{
+        max-width: 200px;
+        min-width:100px;
+        margin: 0;
+    }
+    .buttons{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-right: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .searchGroup{
+        margin-top: 2.3rem;
+        height: 10px;
+    }
+    .sidebar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;    
+    }
+}
+/* JAVASCRIPT ELEMENTS */
+.todo   {
+    margin: 0.5rem;
+    color: #fff;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+.todo li {
+    flex: 1;
+}
+.todo li:nth-child(2) {
+    background-color: rgb(185, 88, 88);
+}
+
+.trash-btn, .complete-btn {
+    background-color: rgb(185, 88, 88);
+    color: white;
+    border: none;
+    padding: 0.2rem;
+    font-size: 1em;
+    cursor: pointer;
+}
+.complete-btn{
+    background: rgb(88, 141, 88);
+}
+.todo-item  {
+    padding: 0rem 0.5rem;
+    list-style: none;
+}
+/* .todo > .todo-item:nth-child(2) {
+    background-color: hsl(0, 0%, 23.1%);
+} */
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.completed  {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall   {
+    transform: translateX(-10rem);
+    opacity: 0;
+}
